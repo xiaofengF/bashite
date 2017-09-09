@@ -18,13 +18,14 @@ $(document).ready(function(e) {
 			sl = parseInt($('.swaplist').css('left'));
 
 			if(ml==0){
-				$('.swaplist').css({left: '1000px'});
-				$('.mainlist').animate({left: ml - 1000 + 'px'},'slow');
-				if(ml==(w-1000)*-1){
-					$('.swaplist').animate({left: '0px'},'slow');
-				}
+				$('.swaplist').css({left: '1500px'});
+				$('.mainlist').animate({left: ml - 500 + 'px'},'slow');
 			}else{
-				$('.og_prev').click();
+				if(ml==-2000){
+					$('.mainlist').animate({left: ml + 2000 + 'px'},'slow');
+				}else{
+					$('.mainlist').animate({left: ml - 500 + 'px'},'slow');
+				}
 			}
 		}
 	})
@@ -41,14 +42,11 @@ $(document).ready(function(e) {
 
 			if(ml<=0 && ml>w*-1){	
 				if(ml==0){
-					$('.swaplist').css({left: '1000px'});
-					$('.mainlist').animate({left: ml - 1000 + 'px'},'slow');
+					
 				}else{
 					$('.swaplist').css({left: w * -1 + 'px'});
-					$('.mainlist').animate({left: ml + 1000 + 'px'},'slow');				
+					$('.mainlist').animate({left: ml + 500 + 'px'},'slow');				
 				}
-			}else{
-				$('.og_next').click();
 			}
 		}
 	})    
