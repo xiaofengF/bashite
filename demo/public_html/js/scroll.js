@@ -13,7 +13,7 @@ $(document).ready(function(e) {
 			$('.swaplist,.mainlist').stop(true,true);
 		}
 		
-		if($('.mainlist li').length>3){
+		if($('.mainlist li').length>4){
 			ml = parseInt($('.mainlist').css('left'));
 			sl = parseInt($('.swaplist').css('left'));
 
@@ -36,17 +36,13 @@ $(document).ready(function(e) {
 			$('.swaplist,.mainlist').stop(true,true);
 		}
 		
-		if($('.mainlist li').length>3){
+		if($('.mainlist li').length>4){
 			ml = parseInt($('.mainlist').css('left'));
 			sl = parseInt($('.swaplist').css('left'));
 
-			if(ml<=0 && ml>w*-1){	
-				if(ml==0){
-					
-				}else{
-					$('.swaplist').css({left: w * -1 + 'px'});
-					$('.mainlist').animate({left: ml + 500 + 'px'},'slow');				
-				}
+			if(ml!=0){	
+				$('.swaplist').css({left: w * -1 + 'px'});
+				$('.mainlist').animate({left: ml + 500 + 'px'},'slow');				
 			}
 		}
 	})    
