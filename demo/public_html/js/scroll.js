@@ -2,6 +2,18 @@ $(document).ready(function(e) {
 	time = window.setInterval(function(){
 		go();
 	},50);
+  
+  var scrollview = document.getElementById('id1');
+  
+  scrollview.onmouseover = function() {
+      clearInterval(time)
+  };
+  scrollview.onmouseout = function() {
+      time = setInterval(function(){
+      	go();
+    }, 50)
+  };
+
 	linum = $('.mainlist li').length;
 	w = linum * 350;
 	$('.piclist').css('width', w + 'px');
@@ -17,10 +29,10 @@ $(document).ready(function(e) {
 			sl = parseInt($('.swaplist').css('left'));
 
 			if(ml==0){
-				$('.swaplist').css({left: '1500px'});
+				$('.swaplist').css({left: '1650px'});
 				$('.mainlist').animate({left: ml - 1 + 'px'},'slow');
 			}else{
-				if(ml>=-2000){
+				if(ml>=-1650){
 					$('.mainlist').animate({left: ml - 1 + 'px'},'slow');
 				}
 			}
@@ -39,10 +51,10 @@ $(document).ready(function(e) {
 			sl = parseInt($('.swaplist').css('left'));
 
 			if(ml==0){
-				$('.swaplist').css({left: '1500px'});
+				$('.swaplist').css({left: '1650px'});
 				$('.mainlist').animate({left: ml - 100 + 'px'},'slow');
 			}else{
-				if(ml>=-2000){
+				if(ml>=-1650){
 					$('.mainlist').animate({left: ml - 100 + 'px'},'slow');
 				}
 			}
@@ -66,13 +78,4 @@ $(document).ready(function(e) {
 		}
 	})    
 });
-
-$(document).ready(function(){
-	$('.og_prev,.og_next').hover(function(){
-			$(this).fadeTo('fast',1);
-		},function(){
-			$(this).fadeTo('fast',0.7);
-	})
-
-})
 
