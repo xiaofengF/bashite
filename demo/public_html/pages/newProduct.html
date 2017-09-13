@@ -30,7 +30,31 @@
            background-size: contain;
        }
        </style>
+       
+       
+       <!--侧面导航栏-->
+       <link href="../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/style2.css" type="text/css" rel="stylesheet" media="all">
+<!--web-font-->
+<link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
 </head>
   
 
@@ -41,7 +65,7 @@
 <body style="background-color: #f2f2f2;">
   <nav style="background-color:#303030">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo" style="color:#f2f2f2">BESSTER</a>
+      <a id="logo-container" href="../index.html" class="brand-logo" style="color:#f2f2f2">BESSTER</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
           
@@ -87,13 +111,60 @@
     <div class="section">
 
       <div class="row">
-        <div class="col s12 center">
-            
-            
-        </div>
-      </div>
+<div class="col s12 center">
+          <div id="menu" style="float:left; ">
+     
+				<div class="top-nav">
+						
+					<div class="nav1">
+						<ul class=" nav nav-sidebar">
+                                                    <li class="active"><a href="#" style="color:#01579b"><strong>Product Categories</strong></a></li>
+							
+							<li><a href="" style="color:#696969">Hot Trainer</a></li>
+							<li><a href="" style="color:#696969">AB Bench</a></li>
+							<li><a href="" style="color:#696969">AB Glide</a></li>
+							<li><a href="" style="color:#696969">Stepper</a></li>
+                                                        <li><a href="" style="color:#696969">Leg Trainer</a></li>
+                                                        <li><a href="" style="color:#696969">Treadmill</a></li>
+                                                        <li><a href="" style="color:#696969">Crazy FIt Massage</a></li>
+                                                        <li><a href="" style="color:#696969">Scooter</a></li>
+                                                        <li><a href="" style="color:#696969">AD TRAINER</a></li>
+                                                        
+						</ul> 
+						<div class="social-icons">
+							<ul>
+								<li><a href="#"></a></li>
+								<li><a href="#" class="fb"></a></li>
+								<li><a href="#" class="be"></a></li>
+								<li><a href="#" class="gg"></a></li>
+							</ul>	
+						</div>						
+					</div>	
+					<!-- script-for-menu -->
+						 <script>
+						   $( "span.menu-icon" ).click(function() {
+							 $( ".nav1" ).slideToggle( 300, function() {
+							 // Animation complete.
+							  });
+							 });
+						</script>
+						<!-- /script-for-menu -->
+				</div>
+         
     </div>
       </div>
+      </div>
+     
+      </div>
+      
+      </div>
+     
+      
+      
+      
+      
+      
+      
       
       
       <!--footer-->
